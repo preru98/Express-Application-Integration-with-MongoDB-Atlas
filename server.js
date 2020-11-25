@@ -1,7 +1,11 @@
 const http = require('http');
 const app =  require('./app');
 
+const connectDB = require('./DB/connection');
+
 const server = http.createServer(app);
+
+connectDB();
 
 const port = 3000;
 const hostname = 'localhost';
